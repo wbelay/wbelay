@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <script src="/SiteAssets/jsrender.js"></script>
+
+    <script type="text/javascript" src="/SiteAssets/testM.js"></script>
+  <style type="text/css">
+             .list-group-item {
+			    padding: 5px 15px;
+			    border:none; 
+			    border-bottom: 3px solid #f0f0f0;
+				}
+
+            #rtcontent{
+
+   List-stye-type:none;
+   margin-bottom:8px;
+   padding-left:10px;
+   padding-right:8px;
+   width: 250px;
+   
+   #rtcontent li a{
+     height:20px;
+     background-color:#f8f8f8;
+     text-align:center;
+     font-family:constantia, "Lucida Bright", "DejaVu Serif" , Georgia, serif;
+     font-weight:bold;
+     font-size:  10px;
+    
+     display:block;
+     text-decoration:none;
+     color:#036 !important;
+     margin:2px;
+     padding:2px;
+
+}
+
+}
+  
+  </style> 
+
+</head>
+<body>
+<div id="detailSection">
+
+
+</div>
+
+<script id="displayData" type="text/x-jsrender" >
+	{{for DataDetail}}
+
+
+         <h2>Commonly Used Links</h2>
+  	
+         	<ul id="rtcontent">
+		   <li class="list-group-item"><a href="{{:Url}}">{{:Description}}</a></li>
+		</ul>
+	{{/for}}
+</script>
+
+   
+<script type="text/javascript">
+$(document).ready(function(){
+  ExecuteOrDelayUntilScriptLoaded(main, "sp.js");
+});
+    </script>
+</body>
+</html>
